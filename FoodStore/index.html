@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +10,48 @@
 <body>
    <!-- header section starting  -->
     <header>
+      <nav>
+         <div class="max-w-[100%] ">
+            <div class="w-[90%] md:w-[75%] mx-auto grid grid-cols-1 md:grid-cols-2  ">
+                <div class="flex justify-between">
+                   <h2>heading</h2>
+                   <div class="flex ">
+                     <div class="block md:hidden " id="menuicon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+                        class="lucide lucide-menu-icon lucide-menu"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>
+                     </div>
+                     <div class="hidden md:hidden" id="closeicon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="lucide lucide-x-icon lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                     </div>
+                   </div>
+                </div>
+                <div class="hidden md:block " id="menuitems">
+                   <ul class="flex flex-col md:flex-row justify-between gap-5 flex-nowrap whitespace-nowrap">
+                     <li>
+                       <a href="#Whcs">Why Choose Us?</a>
+                     </li>
+                     <li>
+                       <a href="#exp">Explore Menu</a>
+                     </li>
+                     <li>
+                       <a href="#Fresh">Fresh</a>
+                     </li>
+                     <li>
+                       <a href="#del">Delivery & Payment</a>
+                     </li>
+                     <li>
+                       <a href="#Follow">Follow us</a>
+                     </li>
+                   
+                   </ul>
+
+                </div>
+            </div>
+
+         </div> 
+
+      </nav>
       <div class="max-w-[100%] bg-[url(https://ik.imagekit.io/g1241mexj/ANBU/foodstore/foodmunch-banner-bg.png_updatedAt=1745939013497)] bg-cover bg-no-repeat h-screen">
          <div class="w-[90%] md:w-[75%] mx-auto flex flex-col justify-center items-center h-screen gap-5">
             <h1 class="text-[45px] leading-[54px] font-[500] text-white">Get Delicious Food at Anytime</h1>
@@ -21,11 +63,13 @@
           </div>
          </div>
       </div>
+      
+     
     </header>
     <!-- header section ending  -->
       <!-- why choose us starting -->
-      <section class="py-10">
-           <div class="mx-w-[100%] space-y-4">
+      <section class="py-10"id="Whcs">
+           <div class="mx-w-[100%] space-y-4" >
                  <div class="w-[90%] md:w-[75%] mx-auto space-y-4">
                     <h2 class="text-[#183b56] text-[28px] font-[700]">Why Choose Us?</h2>
                     <p class="text-[16px] text-[#5a7184]">We use both original recipes and classic versions of famous food items.</p>
@@ -68,7 +112,7 @@
       <!-- why choose us Ending -->
 
       <!-- Explore Menu starting  -->
-      <section class="py-10">
+      <section class="py-10" id="exp">
            <div class="max-w-[100%] space-y-4 ">
                <div class="w-[90%] md:w-[75%] mx-auto space-y-4">
                     <h2 class="text-[#183b56] text-[28px] font-[700]">Explore Menu</h2>
@@ -129,7 +173,7 @@
       </section>
        <!-- Explore Menu Ending  -->
         <!-- Fresh Section starting  -->
-      <section class="py-10">
+      <section class="py-10" id="Fresh">
          <div class="max-w-[100%]">
             <div class="w-[90%] md:w-[75%] mx-auto grid grid-cols-1 md:grid-cols-2 ">
                   <div class="flex justify-center">
@@ -150,7 +194,7 @@
       </section>
          <!-- Fresh Section Ending -->
           <!-- delivery section starting -->
-      <section class="py-10">
+      <section class="py-10" id="del">
          <div class="max-w-[100%]">
              <div class="w-[90%] md:w-[75%] mx-auto grid grid-cols-1 md:grid-cols-2">
                 <div class="flex flex-col items-start gap-5 justify-center order-2 md:order-1">
@@ -194,7 +238,7 @@
       </section>   
           <!-- Gift section ending -->
           <!-- follow us starting  -->
-      <section class="py-10">
+      <section class="py-10" id="Follow">
          <div class="max-[100%]">
             <div class="w-[90%] md:w-[75%] mx-auto">
                <div class="space-y-7 ">
@@ -231,4 +275,21 @@
      </footer>
              <!-- footer ending -->
 </body>
+<script>
+     var menu = document.getElementById("menuicon")
+    var closeIcon  = document.getElementById("closeicon")
+    var navitems = document.getElementById("menuitems")
+
+    menu.addEventListener("click",()=>{
+       navitems.classList.remove("hidden")
+        menu.classList.add("hidden")
+        closeIcon.classList.remove("hidden")
+    })
+      closeIcon.addEventListener("click" , ()=>{
+        navitems.classList.add("hidden")
+        menu.classList.remove("hidden")
+        closeIcon.classList.add("hidden")
+    })
+
+</script>
 </html>
