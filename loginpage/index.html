@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+   
+     <script src="https://cdn.tailwindcss.com"></script>
+
+     <!--FireBase SDK-->
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+</head>
+<body>
+    <div class="w-full h-screen flex justify-center items-center ">
+        <form class="flex flex-col justify-center  p-10 bg-black/20 rounded-lg shadow-lg gap-4" id="loginform" >
+            <h1 class="text-[red] text-xl text-center">Login Page</h1>
+            <label for="Email">Email:</label>
+            <input  type="text" class="rounded-lg shadow-lg border py-2 px-3 border-[green]" id="email">
+            <p id="emailErr" class="text-[red]"></p>
+            <label for="password">Password:</label>
+            <input  type="password"  class="rounded-lg shadow-lg border py-2 px-3 border-[green]" id="password">
+            <p id="PassErr" class="text-[red]"></p>
+            <button type="submit" class="rounded-lg shadow-lg shadow-[white] bg-[blue] py-3 px-2 text-[white] hover:text-[green]">Submit</button>
+        </form> 
+        
+
+    </div>
+</body>
+ <script src="./script.js"></script>
+</html>
