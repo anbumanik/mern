@@ -2,21 +2,26 @@
 <html>
 <head>
   <title>Update Password</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-
-  <h2>Update Password</h2>
-
-  <form id="updateForm">
-    <input type="text" id="userId" placeholder="Enter User ID" required><br><br>
-    <input type="password" id="newPassword" placeholder="Enter New Password" required><br><br>
-    <input type="password" id="confirmPassword" placeholder="Confirm Password" required><br><br>
-    <button type="submit">Update Password</button>
+<body class="w-full h-screen bg-rose-300 flex flex-col justify-center items-center gap-2">
+  
+  
+  <form id="updateForm" class="  py-12 px-10 bg-rose-500 space-y-4 shadow-lg shadow-black rounded-lg border border-black ">
+    <h2 class="text-center text-[20px] text-2xl text-white">Update Password</h2>
+    <label for="id" class="text-white" >User Id:</label><br>
+    <input type="text" id="userId" placeholder="Enter User ID" class="rounded-lg py-2 text-center shadow-lg" required><br><br>
+    <label for="password"  class="text-white"> New Password:</label><br>
+    <input type="password" id="newPassword" placeholder="Enter New Password"  class="rounded-lg py-2 text-center shadow-lg"required><br><br>
+    <label for="password" class="text-white" >Confirm Password:</label><br>
+    <input type="password" id="confirmPassword" placeholder="Confirm Password" class="rounded-lg py-2 text-center shadow-lg" required><br><br>
+    <button type="submit" class="rounded-lg bg-yellow-600  shadow-lg shadow-yellow-400 text-white text-[18px] hover:text-green-950  py-2 px-5">Update Password</button>
+    <p id="message"></p>
   </form>
 
-  <p id="message"></p>
+ 
 
-  <!-- Firebase SDK -->
+  
   <script type="module" src="script.js"></script>
 
 </body>
